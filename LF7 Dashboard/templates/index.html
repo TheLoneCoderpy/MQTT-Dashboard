@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <script src="{{ url_for('static', filename='main.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <div id = "sidebar">
+
+        </div>
+        <div id = "main_area">
+            <div class = "card_body">
+                <div class = "card_title">Messwert</div>
+                <div class = "card_content">20 °C</div>
+            </div>
+            <div style = "height: 40%" class = "card_body">
+                <div class = "card_title">Messwerthistorie</div>
+                <canvas id = "tempChart">
+                    
+                </canvas>
+            </div>
+            <div class = "card_body">
+                <div class = "card_title">Optionen</div>
+                <div class = "card_content" style = "display: flex; flex-direction: row; gap: 20px;">
+                    <div class = "vbox">
+                        <div class = "vbox_title">Lüfter</div>
+                        <button>An</button>
+                    </div>
+                   
+                    <div class = "vbox">
+                        <div class = "vbox_title">Updateintervall</div>
+                        <button onclick = "main()">Update</button>
+                    </div>
+
+                    <div class = "vbox">
+                        <div class = "vbox_title">Untere Grenze</div>
+                        <input type="number" id="interval" min="1" value="10">
+                        <label for="anzahl">Anzahl der letzten Einträge:</label>
+                        <select id="anzahl" onchange="updateChart()">
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="all">Alle</option>
+                        </select>
+                    </div>
+
+                    <div class = "vbox">
+                        <label for="sortierung">Sortierung:</label>
+                        <select id="sortierung" onchange="updateChart()">
+                            <option value="original">Original</option>
+                            <option value="asc">Aufsteigend</option>
+                            <option value="desc">Absteigend</option>
+                        </select>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
