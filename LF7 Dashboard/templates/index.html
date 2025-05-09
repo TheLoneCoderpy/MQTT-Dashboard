@@ -25,18 +25,18 @@
                 <div class = "card_content" style = "display: flex; flex-direction: row; gap: 20px;">
                     <div class = "vbox">
                         <div class = "vbox_title">Lüfter</div>
-                        <button>An</button>
+                        <button onclick="toggle_on()" id = "toggle_btn">An</button>
                     </div>
                    
                     <div class = "vbox">
-                        <div class = "vbox_title">Updateintervall</div>
+                        <div class = "vbox_title">Update</div>
                         <button onclick = "main()">Update</button>
                     </div>
 
                     <div class = "vbox">
                         <div class = "vbox_title">Untere Grenze</div>
                         <input type="number" id="interval" min="1" value="10">
-                        <label for="anzahl">Anzahl der letzten Einträge:</label>
+                        <label for="anzahl" class = "vbox_title">Anzahl der letzten Einträge</label>
                         <select id="anzahl" onchange="updateChart()">
                             <option value="5">5</option>
                             <option value="10">10</option>
@@ -46,7 +46,7 @@
                     </div>
 
                     <div class = "vbox">
-                        <label for="sortierung">Sortierung:</label>
+                        <label for="sortierung" class = "vbox_title">Sortierung</label>
                         <select id="sortierung" onchange="updateChart()">
                             <option value="original">Original</option>
                             <option value="asc">Aufsteigend</option>

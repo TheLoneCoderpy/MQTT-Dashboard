@@ -124,6 +124,16 @@ function updateChart() {
     });
 }
 
+function toggle_on() {
+    let btn = document.getElementById("toggle_btn");
+    let curtext = btn.textContent;
+    if (curtext == "An") {
+        btn.textContent = "Aus";
+    } else {
+        btn.textContent = "An";
+    }
+}
+
 window.onload = function () {
     main();
 };
