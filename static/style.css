@@ -1,0 +1,138 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(230, 230, 255);
+    gap: 20px;
+    overflow: hidden;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#top {
+    width: calc(100% - 40px);
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#bottom {
+    width: calc(100% - 60px);
+    height: calc(70% - 100px);
+    
+    padding: 10px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#temp {
+    height: calc(100% - 20px);
+    padding: 10px;
+    aspect-ratio: 1;
+    border-radius: 16px;
+    border: 3px solid #3a86ff;
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3a86ff50;
+    color: rgb(100, 100, 255);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.temp_row {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+#settings {
+    height: calc(100% - 20px);
+    padding: 10px;
+    border-radius: 16px;
+    border: 3px solid rgb(75, 192, 192);
+    font-size: 32px;
+    background-color: rgb(75, 192, 192, 0.5);
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#temp_inner {
+    font-size: 60px;
+    color: rgb(0, 0, 255);
+}
+
+#temp_mean {
+    font-size: 40px;
+    color: rgb(0, 0, 255);
+}
+
+.settings_block {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(75, 192, 192, 0.5);
+    gap: 5px;
+}
+
+.block_title {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(48, 125, 125);
+}
+
+input[type="number"] {
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    background-color: rgb(66, 171, 171)
+}
+
+#status {
+    height: calc(100% - 20px);
+    aspect-ratio: 1;
+    padding: 10px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 30px;
+}
+
+#status svg {
+    width: 70%;
+    aspect-ratio: 1;
+}
+
+.status_warm {
+    background-color: #d0000050;
+    border: 3px solid #d00000;
+    fill: #d00000;
+    color: #d00000;
+}
+
+.status_good {
+    background-color: #a7c95750;
+    border: 3px solid #38b000;
+    fill: #38b000;
+    color: #38b000;
+}
+
+.status_cold {
+    background-color: #61a5c250;
+    border: 3px solid #61a5c2;
+    fill: #61a5c2;
+    color: #61a5c2;
+}

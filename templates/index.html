@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js einbinden -->
+        <script src="{{ url_for('static', filename='main2.js') }}"></script>
+    </head>
+    <body>
+        <div id="top">
+            <div id="temp">
+                <div class = "temp_row">
+                    <div id="temp_inner">--</div>
+                    <div>°C</div>
+                </div>
+                <div class = "temp_row">
+                    <div id = "temp_mean">--</div>
+                    <div>∅ °C</div>
+                </div>
+               
+            </div>
+            <div id="settings">
+                <div class = "settings_block">
+                    <div class = "block_title">Wertanzahl</div>
+                    <input type="number" id = "max_val_input" onchange="set_max_dp()" value="10">
+                </div>
+                <div class = "settings_block">
+                    <div class = "block_title">Update Intervall</div>
+                    <input type="number" id = "ud_input" onchange = "set_udi()" value = "1">
+                </div>
+                <div class = "settings_block">
+                    <div class = "block_title">Obere Grenze</div>
+                    <input type="number" id = "ub_in" onchange="set_bounds()" value="60">
+                    <div style = "height: 20px"></div>
+                    <div class = "block_title">Untere Grenze</div>
+                    <input type="number" id = "lb_in" onchange="set_bounds()" value="20">
+                </div>
+                
+            </div>
+            <div id = "status" >
+                
+            </div>
+        </div>
+        <div id="bottom" >
+            <canvas id="tempGraph" width="600" height="200"></canvas>
+        </div>
+    </body>
+    </html>
